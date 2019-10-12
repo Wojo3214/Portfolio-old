@@ -13,23 +13,43 @@
     <script src="https://kit.fontawesome.com/6a331c31d1.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-    $(document).ready(function(){
-      $("#me").click(function(){
-        $("#about").slideToggle(500);
-      });
-        $("#xp").click(function(){
-        $("#experiences").slideToggle();
-      });
-        $("#portfolio_circle").click(function(){
-        $("#portfolio").slideToggle();
-      });
-        $("#skill_circle").click(function(){
-        $("#skills").slideToggle();
-      });
-        $("#contact_circle").click(function(){
-        $("#contact").slideToggle();
-      });
-    });
+        jQuery(document).ready(function($){
+            $( ".btn1" ).click(function(e) {
+                e.preventDefault();
+                    $(".circle_menu_content").not(".content1").slideUp();
+                    $( ".content1" ).slideToggle( "slow", function() {
+                });
+             });
+
+            $( ".btn2" ).click(function(e) {
+                e.preventDefault();
+                    $(".circle_menu_content").not(".content2").slideUp();
+                    $( ".content2" ).slideToggle( "slow", function() {
+                });
+            });
+
+            $( ".btn3" ).click(function(e) {
+                e.preventDefault();
+                    $(".circle_menu_content").not(".content3").slideUp();
+                    $( ".content3" ).slideToggle( "slow", function() {
+                });
+            });
+
+            $( ".btn4" ).click(function(e) {
+                e.preventDefault();
+                    $(".circle_menu_content").not(".content4").slideUp();
+                    $( ".content4" ).slideToggle( "slow", function() {
+                });
+            });
+
+            $( ".btn6" ).click(function(e) {
+                e.preventDefault();
+                    $(".circle_menu_content").not(".content6").slideUp();
+                    $( ".content6" ).slideToggle( "slow", function() {
+                });
+            });
+
+        });
     </script>
 </head>
 
@@ -40,37 +60,32 @@
         </header>
         <main>
             <section class="circle_menu">
-                <div class="circle_menu_item" id="me">
+                <div class="circle_menu_item btn1" id="me">
                     <i class="icon-user-1"></i>
                     <h4>About me</h4>
-                    <a href="#about" class="menu_link"></a>
                 </div>
-                <div class="circle_menu_item" id="xp">
+                <div class="circle_menu_item btn2" id="xp">
                     <i class="icon-archive"></i>
                     <h4>Experience</h4>
-                    <a href="#experiences" class="menu_link"></a>
                 </div>
-                <div class="circle_menu_item" id="portfolio_circle">
+                <div class="circle_menu_item btn3" id="portfolio_circle">
                     <i class="demo-icon icon-briefcase"></i>
                     <h4>Portfolio</h4>
-                    <a href="#portfolio" class="menu_link"></a>
                 </div>
-                <div class="circle_menu_item" id="skill_circle">
+                <div class="circle_menu_item btn4" id="skill_circle">
                     <i class="icon-tools"></i>
                     <h4>Skills</h4>
-                    <a href="#me" class="menu_link"></a>
                 </div>
                 <div class="circle_menu_item">
                     <i class="icon-download"></i>
                     <h4>Download CV</h4>
                 </div>
-                <div class="circle_menu_item" id="contact_circle">
+                <div class="circle_menu_item btn6" id="contact_circle">
                     <i class="icon-chat"></i>
                     <h4>Contact</h4>
-                    <a href="#me" class="menu_link"></a>
                 </div>
             </section>
-            <section class="circle_menu_content" id="about">
+            <section class="circle_menu_content content1" id="about">
                 <div class="about_me">
                     <span class="capital_letter">A</span>
                     <span class="small_letter">bout me</span>
@@ -82,7 +97,7 @@
                             </div>
 
                             <p><span class="name">Name:</span> Wojciech Dzwończyk</p>
-                            <p><span class="name">Date of birth:</span> 4 June 1999</p>
+                            <p><span class="name">Date of birth:</span> 4th of June 1999</p>
                             <p><span class="name">Email:</span><a href="mailto:wdzwonek97@gmail.com"> wdzwonek97@gmail.com</a></p>
                             
                             <div class="social_media_container">
@@ -107,7 +122,7 @@
                     </div>
                 </div>
             </section>
-            <section class="circle_menu_content" id="experiences">
+            <section class="circle_menu_content content2" id="experiences">
                 <div class="experience">
                     <span class="capital_letter">E</span>
                     <span class="small_letter">xperience</span>
@@ -158,7 +173,7 @@
                     </div>
                 </div>
             </section>
-            <section class="circle_menu_content" id="portfolio">
+            <section class="circle_menu_content content3" id="portfolio">
                 <div class="portfolio">
                     <div class="block">
                         <span class="capital_letter">P</span>
@@ -183,7 +198,7 @@
                     </div>
                 </div>
             </section>
-            <section class="circle_menu_content">
+            <section class="circle_menu_content content4" id="skill_container">
                 <div class="skills" id="skills">
                     <span class="capital_letter">S</span>
                     <span class="small_letter">kills</span>
@@ -202,7 +217,7 @@
                     </li>
                 </div>
             </section>
-            <section class="circle_menu_content">
+            <section class="circle_menu_content content6" id="contact_container">
                 <div class="contact" id="contact">
                     <span class="capital_letter">C</span>
                     <span class="small_letter">ontact</span>

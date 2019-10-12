@@ -9,7 +9,7 @@ html{
 }
 
 body{
-    background-color: #2C3F5D;
+    background-color: #263752;
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
     color: #E0E0E0;
@@ -46,6 +46,7 @@ header{
     flex-wrap: wrap;
     padding: 5px;
     margin-top: 40px;
+    cursor: pointer;
 }
 
 .circle_menu_item{
@@ -56,7 +57,7 @@ header{
     margin: 10px 5px;
     text-align: center;
     transition: 0.2s;
-    color: #2C3F5D;
+    color: #263752;
 }
 
 .menu_link{
@@ -99,7 +100,7 @@ header{
     color: #F19A7B;
 }
 
-#about, #experiences, #portfolio, #skills, #contact{
+.circle_menu_content{
     display: none;
 }
 
@@ -239,6 +240,11 @@ header{
 
 /***EXPERIENCE***/
 
+.experience{
+    width: 90%;
+    margin: 0 auto;
+}
+
 .time_line{
     width: 80%;
     margin: 50px auto;
@@ -371,7 +377,7 @@ header{
     0%{
         width: 0%;
     }
-
+    
     100%{
         width: 96%
     }
@@ -381,7 +387,7 @@ header{
     0%{
         width: 0%;
     }
-
+    
     100%{
         width: 90%
     }
@@ -391,7 +397,7 @@ header{
     0%{
         width: 0%;
     }
-
+    
     100%{
         width: 55%
     }
@@ -532,8 +538,8 @@ input[type="submit"]{
     background-color: #0DBE9A;
 }
 
-@media screen and (max-width: 755px) {
-
+@media screen and (max-width: 755px) {    
+    
     .time_line:before {
       left: 8px;
       width: 2px;
@@ -553,19 +559,19 @@ input[type="submit"]{
 }
 
 @media only screen and (min-width: 756px){
-
+    
     .circle_menu{
         width: 60%;
     }
-
+    
     .portfolio_container{
         flex-direction: row;
     }
-
+    
     .portfolio_ .block{
         align-self: flex-start;
     }
-
+    
     .portfolio_item{
         width: 30%;
         height: 200px;
