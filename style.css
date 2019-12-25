@@ -31,6 +31,7 @@ body::-webkit-scrollbar-thumb{
 h1{
     color: #fff;
     text-align: center;
+    letter-spacing: 2px;
 }
 
 h4{
@@ -692,12 +693,19 @@ input[type="submit"]:hover{
         width: 100%;
     }
     
-    50%{
+    25%{
         width: 95%;
     }
     
+    50%{
+        width: 100%;
+    }
+    
+    75%{
+        width: 98%;
+    }
+    
     100%{
-        margin-bottom: 0;
         width: 100%;
     }
 }
