@@ -15,6 +15,19 @@ body{
     color: #E0E0E0;
 }
 
+body::-webkit-scrollbar{
+    width: 6px;
+}
+
+body::-webkit-scrollbar-track{
+    background-color: #263752;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: #2187e7;
+    border-radius: 20px;
+}
+
 h1{
     color: #fff;
     text-align: center;
@@ -23,6 +36,10 @@ h1{
 h4{
     font-weight: 200;
     font-size: 16px;
+}
+
+.portfolio-category{
+    font-size: 14px;
 }
 
 .wrapper{
@@ -55,9 +72,40 @@ header{
     background-color: #3E516E;
     border-radius: 100px;
     margin: 10px 5px;
+    transform: scale(0);
     text-align: center;
-    transition: 0.2s;
+    transition: transform .2s ease;
     color: #263752;
+    animation: 0.4s show;
+    animation-fill-mode: forwards;
+}
+
+.circle_menu_item:nth-child(2){
+    animation-delay: 0.2s;
+}
+
+.circle_menu_item:nth-child(3){
+    animation-delay: 0.3s;
+}
+
+.circle_menu_item:nth-child(4){
+    animation-delay: 0.4s;
+}
+
+.circle_menu_item:nth-child(5){
+    animation-delay: 0.5s;
+}
+
+.circle_menu_item:nth-child(6){
+    animation-delay: 0.6s;
+}
+
+.circle_menu:focus {
+    outline: none !important;
+}
+
+.circle_menu_item:focus {
+    outline: none !important;
 }
 
 .menu_link{
@@ -68,6 +116,7 @@ header{
 }
 
 .circle_menu_item:hover{
+    animation-fill-mode: none;
     transform: scale(1.1);
     -webkit-box-shadow: 0px 0px 22px -1px rgba(0,0,0,0.38);
     -moz-box-shadow: 0px 0px 22px -1px rgba(0,0,0,0.38);
@@ -102,6 +151,20 @@ header{
 
 .circle_menu_content{
     display: none;
+}
+
+@keyframes show{
+    0%{
+        transform: scale(0);
+    }
+    
+    50%{
+        transform: scale(1.2);
+    }
+    
+    100%{
+        transform: scale(1);
+    }
 }
 
 /***ABOUT ME***/
@@ -178,6 +241,11 @@ header{
 
 .social_media_item i{
     font-size: 20px;
+    transition: 0.2s;
+}
+
+.social_media_item:hover i{
+    color: #263752;
 }
 
 .social_media_item:nth-child(1) i{
@@ -193,6 +261,10 @@ header{
 }
 
 .social_media_item:nth-child(4) i{
+    margin-top: 8px;
+}
+
+.social_media_item:nth-child(5) i{
     margin-top: 8px;
 }
 
@@ -223,6 +295,10 @@ header{
     margin: 20px 0;
 }
 
+.about_me_second p{
+    margin: 10px 0;   
+}
+
 .about_me_first p{
     text-align: center;
     position: relative;
@@ -233,6 +309,7 @@ header{
     width: 60px;
     height: 2px;
     position: absolute;
+    border-radius: 2px;
     top: 20px;
     left: 46%;
     background-color: #fff;
@@ -314,8 +391,9 @@ header{
     color: #a4a4a4;
 }
 
-.timeline-content p{
+.timeline-content ul{
     font-size: 14px;
+    padding: 0 20px;
     line-height: 1.5em;
     word-spacing: 1px;
     color: #888;
@@ -368,10 +446,31 @@ header{
     animation: css 2s;
 }
 
+.scss{
+    width: 80%;
+    animation: scss 2s;
+}
+
 .js{
     width: 55%;
     animation: js 2s;
 }
+
+.seo{
+    width: 95%;
+    animation: seo 2s;
+}
+
+.ph{
+    width: 70%;
+    animation: ph 2s;
+}
+
+/***
+.wp{
+    width: 50%;
+    animation: wp 2s;
+}***/
 
 @keyframes html{
     0%{
@@ -393,6 +492,16 @@ header{
     }
 }
 
+@keyframes scss{
+    0%{
+        width: 0%;
+    }
+    
+    100%{
+        width: 80%
+    }
+}
+
 @keyframes js{
     0%{
         width: 0%;
@@ -402,6 +511,37 @@ header{
         width: 55%
     }
 }
+
+@keyframes seo{
+    0%{
+        width: 0%;
+    }
+    
+    100%{
+        width: 95%
+    }
+}
+
+@keyframes ph{
+    0%{
+        width: 0%;
+    }
+    
+    100%{
+        width: 70%
+    }
+}
+
+/***
+@keyframes wp{
+    0%{
+        width: 0%;
+    }
+    
+    100%{
+        width: 50%
+    }
+}***/
 
 /***PORTFOLIO***/
 .portfolio{
@@ -418,10 +558,9 @@ header{
 }
 
 .portfolio_item{
-    width: 80%;
-    height: 200px;
+    width: 293px;
+    height: auto;
     margin: 10px 0;
-    background-color: lightgray;
     position: relative;
     cursor: pointer;
 }
@@ -480,7 +619,7 @@ input{
 }
 
 input::placeholder{
-    color: #2C3F5D;
+    color: #263752;
 }
 
 .radioContainer{
@@ -536,6 +675,31 @@ textarea{
 
 input[type="submit"]{
     background-color: #0DBE9A;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover{
+    animation: submit 0.5s;
+    background-color: #0CA687;
+}
+
+@keyframes submit{
+    0%{
+        width: 100%;
+    }
+    
+    50%{
+        width: 95%;
+    }
+    
+    100%{
+        margin-bottom: 0;
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 755px) {    
@@ -574,6 +738,6 @@ input[type="submit"]{
     
     .portfolio_item{
         width: 30%;
-        height: 200px;
+        height: auto;
     }
 }
